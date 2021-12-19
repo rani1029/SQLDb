@@ -6,12 +6,11 @@ estd date,No_of_colleges int);
 
 select * from UniversityDetails;
 
-Create table college_details(College_code int not null foreign key references UniversityDetails(id),Departments varchar(200),College_type varchar(100),
+Create table college_details(College_code int not null primary key,college_name varchar(200), location varchar(200),College_type varchar(100),
 No_of_deartments int);
 
 select * from college_details;
 
-Alter table college_details add College_name varchar(200) primary key;
 
 Create table department(Department_id int identity(1,1) Primary key not null,department_name varchar(100),No_of_students int,
 No_of_faculty int);
